@@ -1,0 +1,65 @@
+/* Applies a font size of 16px to the HTML and body elements */
+html, body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Sets a default font family to either Arial or Sans-Serif */
+}
+
+/* Sets the paragraph text to a font weight of 400 and a line-height of 1.4em */
+p {
+    font-weight: 400;
+    line-height: 1.4em;
+}
+
+/* Styles the h1 element */
+h1 {
+    font-weight: 700; /* Makes text bold */
+    text-transform: uppercase; /* Converts text to uppercase */
+    text-align: center; /* Centers the text */
+    margin: 0; /* Removes default margin */
+}
+
+/* Styles the h2 element */
+h2 {
+    font-weight: 500; /* Applies a semi-bold font with a weight of 500 */
+    text-align: left; /* Aligns text to the left */
+    padding-top: 15px; /* Adds top padding */
+    margin: 0; /* Removes default margin */
+}
+
+/* Styles the address block */
+address {
+    text-align: center; /* Centers the text */
+    margin-top: 20px; /* Adds top margin */
+}
+
+/* Styles the website URL within the address */
+address a {
+    font-weight: bold; /* Makes the text bold */
+    font-size: 1.25em; /* Increases the font size */
+    color: #4F3674; /* Sets the font color */
+    text-decoration: none; /* Removes the underline */
+}
+
+/* Styles the website link when hovering */
+address a:hover {
+    text-decoration: underline; /* Adds underline during hover */
+    background-color: #D6A800; /* Applies background color during hover */
+}
+
+/* Styles website link after visiting it */
+address a:visited {
+    color: #6C2C77; /* Sets example color for visited links */
+    font-style: italic; /* Makes text italic for visited links */
+}
+
+/* Styles the sentence class */
+.sentence {
+    font-style: italic; /* Changes text to italic */
+}
+
+/* Styles the intro class AKA the first paragraph in this context */
+.intro {
+    text-indent: 2em; /* Indents the first line of the paragraph */
+}
