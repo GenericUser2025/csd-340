@@ -1,0 +1,121 @@
+/* General styles for the header */
+header {
+    background-color: #2c3e50; /* Dark Navy Blue for a professional look */
+    color: white; /* White text for contrast */
+    padding: 20px; /* Adds space inside the header */
+    text-align: center; /* Centers the text inside the header */
+    width: 100%; /* Makes the header span the full width of the page */
+    box-sizing: border-box; /* Includes padding in the total width */
+}
+
+/* Styles for the navbar */
+#navbar {
+    overflow: hidden; /* Prevents content from overflowing the container */
+    background-color: #6a5acd; /* Medium Slate Blue background */
+    border-bottom: 15px solid #5a4f9d; /* Darker border at the bottom for a defined look */
+    width: 100%; /* Makes the navbar span the full width of the page */
+    box-sizing: border-box; /* Includes border in the total width */
+}
+
+#navbar a {
+    float: left; /* Aligns the links horizontally */
+    display: block; /* Ensures links fill the block area */
+    color: white; /* White text color for contrast */
+    text-align: center; /* Centers the text inside the links */
+    padding: 14px 16px; /* Adds space inside each link */
+    text-decoration: none; /* Removes underlines from links */
+}
+
+#navbar a:hover {
+    background-color: #b0c4de; /* Light Steel Blue on hover for visual feedback */
+    color: #333; /* Darker text color for better readability on hover */
+}
+
+/* Styles for the main container */
+#container {
+    margin: 2% 5% 100px 5%; /* Margin shorthand: top right bottom left */
+    padding: 10px; /* Adds space inside the container */
+    box-sizing: border-box; /* Includes padding in the total width */
+}
+
+/* Styles for the card component */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Shadow for a lifted effect */
+    transition: 0.3s; /* Smooth transition for hover effects */
+    width: 50%; /* Sets the width to half of the container */
+    background-color: #ffffff; /* White background for the card */
+}
+
+.card-title {
+    text-align: center; /* Centers the text in the card title */
+    font-size: 2em; /* Makes the title larger */
+    color: #2c3e50; /* Dark Navy Blue to match header background color */
+    font-weight: 400; /* Normal font weight */
+}
+
+.card-content {
+    padding: 2px 16px; /* Adds space inside the card content */
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Darker shadow on hover for emphasis */
+}
+
+/* Styles for the movies table */
+#movies {
+    border-collapse: collapse; /* Ensures borders are collapsed into a single border */
+    width: 100%; /* Full width of the container */
+    margin-bottom: 30px; /* Adds margin below the table */
+}
+
+#movies th {
+    border: 1px solid #ddd; /* Light grey border for table cells */
+    background-color: #2c3e50; /* Dark Navy Blue background color */
+    color: white; /* White text color for contrast */
+    padding-top: 12px; /* Padding above the header text */
+    padding-bottom: 12px; /* Padding below the header text */
+    padding-left: 6px;
+    text-align: left; /* Aligns text to the left */
+}
+
+#movies td {
+    border: 1px solid #ddd; /* Light grey border for table cells */
+    padding: 8px; /* Padding inside each table cell */
+}
+
+/* Updated footer styles */
+footer {
+    background-color: #2c3e50; /* Dark Navy Blue for consistency with header */
+    position: fixed; /* Fixes the footer at the bottom of the page */
+    left: 0; /* Aligns footer to the left edge */
+    bottom: 0; /* Aligns footer to the bottom edge */
+    width: 100%; /* Full width of the page */
+    padding: 10px; /* Adds space inside the footer */
+    box-sizing: border-box; /* Includes padding in the total width */
+    display: flex; /* Uses Flexbox for layout */
+    justify-content: space-between; /* Distributes space between items */
+    align-items: center; /* Aligns items vertically centered */
+    z-index: 1000; /* Ensures the footer is on top of other content */
+}
+
+.footer-content {
+    display: flex; /* Uses Flexbox for the footer content */
+    justify-content: space-between; /* Distributes space between copyright and link */
+    width: 100%; /* Full width of the footer */
+}
+
+footer p {
+    color: white; /* White text color for contrast */
+    font-weight: 400; /* Normal font weight */
+    font-style: italic; /* Italicizes the text */
+    margin: 0; /* Removes default margins */
+}
+
+footer a {
+    color: white; /* White link color for consistency */
+    text-decoration: none; /* Removes underlines from links */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underlines links on hover for better visibility */
+}
