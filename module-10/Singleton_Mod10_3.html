@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'
+  'http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd'>
+
+<html xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <script>
+      function displayImage(imageFile) {
+        var mainImage = document.getElementById("mainImage");
+        mainImage.src = imageFile;
+      }
+    </script>
+    <link rel='stylesheet' type='text/css' href='body1.css' />
+    <style>
+      body { font-family: Arial, sans-serif; background-color: #f0f0f0; }
+      h1 { color: #2c3e50; }
+      .image-container { margin: 20px; display: inline-block; }
+      img { border: 2px solid #2980b9; border-radius: 10px; }
+      .info { color: #34495e; font-size: 16px; }
+    </style>
+  </head>
+
+  <body>
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+    <br />
+    <div class="image-container">
+      <a href="#" onmouseover="earth.src='earth_01.jpg';" onmouseout="earth.src='earth_02.jpg';" onclick="displayImage('earth_01.jpg');">
+        <img name="earth" src="earth_02.jpg" width="150">
+      </a>
+      <p class="info">Hover over Earth</p>
+    </div>
+    <div class="image-container">
+      <a href="#" onmouseover="milkyway.src='milkyway_01.jpg';" onmouseout="milkyway.src='milkyway_02.jpg';" onclick="displayImage('milkyway_01.jpg');">
+        <img name="milkyway" src="milkyway_02.jpg" width="150">
+      </a>
+      <p class="info">Hover over Milky Way</p>
+    </div>
+    <br />
+    <img id="mainImage" src="earth_02.jpg" style="width: 300px; height: 200px; border-radius: 10px;">
+    <br />
+    <div>
+      <p class="info">Click an image to display it larger!</p>
+      <p class="info">Right-click and select View Source for more details.</p>
+    </div>
+  </body>
+</html>
