@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>Assignment 11.2: JavaScript - Part 3</h1>
+        </header>
+
+        <p>Enter a task below, then use the buttons to add, delete, or display your to-do list.</p>
+        <input type="text" id="taskInput" placeholder="Enter a special task">
+        <br>
+        <button onclick="addTask()">Add</button>
+        <button onclick="deleteLastTask()">Delete Last Entry</button>
+        <button onclick="displayTasks()">Display</button>
+        <div id="output"></div>
+
+        <footer>
+            <p>&copy; 2024 Paul Singleton</p>
+            <a href="../index.html">Back to Portal Page</a>
+        </footer>
+    </div>
+
+    <script>
+        let tasks = [];
+
+        function addTask() {
+            let task = document.getElementById("taskInput").value;
+            if (task.trim() !== "") {
+                tasks.push(task);
+                alert(`Added: "${task}" at position ${tasks.length}`);
+                document.getElementById("taskInput").value = "";  // Wipes input after entry
+            } else {
+                alert("Please enter a valid task!");
+            }
+        }
+
+        function deleteLastTask() {
+            if (tasks.length > 0) {
+                let removedTask = tasks.pop();
+                alert(`Deleted: "${removedTask}"`);
+            } else {
+                alert("No tasks to delete.");
+            }
+        }
+
+        function displayTasks() {
+            if (tasks.length === 0) {
+                alert("No tasks to display.");
+            } else {
+                let output = "<h3>Your To-Do List:</h3><ol>";
+                for (let i = 0; i < tasks.length; i++) {
+                    output += `<li>${tasks[i]}</li>`;
+                }
+                output += "</ol>";
+                document.getElementById("output").innerHTML = output;
+            }
+        }
+    </script>
+</body>
+</html>
