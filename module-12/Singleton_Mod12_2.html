@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="Singleton_Mod12_2.css">
+    <style>
+        button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Assignment 12.2: JavaScript - Part 4</h1>
+        <div class="side-by-side">
+            <div class="left-div">
+                <h3>Top 10 Favorite Books</h3>
+                <ol id="bookList">
+                    <li>Dune</li>
+                    <li>Behold a Pale Horse</li>
+                    <li>Fingerprints of the Gods</li>
+                    <li>Aliens</li>
+                    <li>The Crucible</li>
+                    <li>Starcraft</li>
+                    <li>Warcraft</li>
+                    <li>Tuck Everlasting</li>
+                    <li>To Kill a Mockingbird</li>
+                    <li>The Great Gatsby</li>
+                </ol>
+                <button onclick="displayTopToBottom()">Top to Bottom</button>
+                <button onclick="displayBottomToTop()">Bottom to Top</button>
+                <div id="output"></div>
+            </div>
+            <div class="right-div">
+                <h3>5 Things I’ve Learned Since the Course Started</h3>
+                <ul>
+                    <li>Java Programming</li>
+                    <li>Python Programming</li>
+                    <li>JDK Environments</li>
+                    <li>Environment Variables</li>
+                    <li>Add-ons for Visual Studio Code</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-div">
+            <a href="../index.html">Return to Landing Page</a>
+        </div>
+    </div>
+
+    <script>
+        // Puts the books in an array
+        const books = [
+            "Dune",
+            "Behold a Pale Horse",
+            "Fingerprints of the Gods",
+            "Aliens",
+            "The Crucible",
+            "Starcraft",
+            "Warcraft",
+            "Tuck Everlasting",
+            "To Kill a Mockingbird",
+            "The Great Gatsby"
+        ];
+
+        // Displays books from top to bottom in ascending order
+        function displayTopToBottom() {
+            const sortedBooks = [...books].sort(); // Sort books in ascending order
+            document.getElementById("output").innerHTML = sortedBooks.map(book => `<li>${book}</li>`).join('');
+        }
+
+        // Displays books from bottom to top in decending order
+        function displayBottomToTop() {
+            const sortedBooks = [...books].sort().reverse(); // Sort books in descending order
+            document.getElementById("output").innerHTML = sortedBooks.map(book => `<li>${book}</li>`).join('');
+        }
+    </script>
+</body>
+</html>
